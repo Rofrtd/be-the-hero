@@ -23,14 +23,14 @@ export default function NewCase() {
     const data = {
       title,
       description,
-      value
+      value,
     };
 
     try {
       await api.post("cases", data, {
         headers: {
-          Authorization: ngoId
-        }
+          Authorization: ngoId,
+        },
       });
       history.push("/profile");
     } catch (err) {
@@ -52,17 +52,17 @@ export default function NewCase() {
           <input
             placeholder="Case title"
             value={title}
-            onChange={e => setTitle(e.target.value)}
+            onChange={(e) => setTitle(e.target.value)}
           />
           <textarea
             placeholder="Description"
             value={description}
-            onChange={e => setDescription(e.target.value)}
+            onChange={(e) => setDescription(e.target.value)}
           />
           <input
             placeholder="Cost"
             value={value}
-            onChange={e => setValue(e.target.value)}
+            onChange={(e) => setValue(e.target.value)}
           />
 
           <button type="submit" className="button">
