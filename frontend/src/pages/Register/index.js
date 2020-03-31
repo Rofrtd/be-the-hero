@@ -24,7 +24,7 @@ export default function Register() {
       email,
       whatsapp,
       city,
-      state
+      state,
     };
 
     try {
@@ -53,14 +53,14 @@ export default function Register() {
             type="text"
             placeholder="NGO name"
             value={name}
-            onChange={e => setName(e.target.value)}
+            onChange={(e) => setName(e.target.value)}
             required
           />
           <input
             type="email"
             placeholder="Email"
             value={email}
-            onChange={e => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
             minLength="5"
             required
           />
@@ -68,7 +68,7 @@ export default function Register() {
             type="number"
             placeholder="Whatsapp"
             value={whatsapp}
-            onChange={e => setWhatsapp(e.target.value)}
+            onChange={(e) => setWhatsapp(e.target.value)}
             required
           />
           <div className="input-group">
@@ -76,7 +76,7 @@ export default function Register() {
               type="text"
               placeholder="City"
               value={city}
-              onChange={e => setCity(e.target.value)}
+              onChange={(e) => setCity(e.target.value)}
               minLength="4"
               required
             />
@@ -86,7 +86,7 @@ export default function Register() {
               placeholder="State"
               style={{ width: 95 }}
               value={state}
-              onChange={e => setState(e.target.value)}
+              onChange={(e) => setState(e.target.value)}
               required
             />
           </div>

@@ -18,10 +18,10 @@ export default function Profile() {
     api
       .get("profile", {
         headers: {
-          Authorization: ngoId
-        }
+          Authorization: ngoId,
+        },
       })
-      .then(res => {
+      .then((res) => {
         setCases(res.data);
       });
   }, [ngoId]);
@@ -30,11 +30,11 @@ export default function Profile() {
     try {
       await api.delete(`cases/${id}`, {
         headers: {
-          Authorization: ngoId
-        }
+          Authorization: ngoId,
+        },
       });
 
-      setCases(cases.filter(cases => cases.id !== id));
+      setCases(cases.filter((cases) => cases.id !== id));
     } catch (err) {
       alert("Unable to delete case, try again!");
     }
@@ -58,7 +58,7 @@ export default function Profile() {
       </header>
       <h1>Registered Cases</h1>
       <ul>
-        {cases.map(c => (
+        {cases.map((c) => (
           <li key={c.id}>
             <strong>CASE:</strong>
             <p>{c.title}</p>
@@ -70,7 +70,7 @@ export default function Profile() {
             <p>
               {Intl.NumberFormat("en-IN", {
                 style: "currency",
-                currency: "AUD"
+                currency: "AUD",
               }).format(c.value)}
             </p>
             <button onClick={() => handleDeleteCase(c.id)} type="button">
