@@ -44,7 +44,7 @@ export default function Register() {
           <p>
             Sign up and help people find your non-profit organizations cases
           </p>
-          <Link className="back-link" to="/">
+          <Link className="back-link" to="/login">
             <FiArrowLeft size={16} color="#e02041" /> Log In
           </Link>
         </section>
