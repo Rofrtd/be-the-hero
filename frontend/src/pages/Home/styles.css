@@ -23,7 +23,6 @@ header{
   margin-left: 15px;
   min-width: 180px;
   max-width: 180px;
-  float: right;
 }
 
 .banner-container{
@@ -33,7 +32,6 @@ header{
     color:#e02041;
     width: auto;
     padding: 60px;
-    background: #f0f0f5;
     box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     margin: 30px;
@@ -48,7 +46,6 @@ header{
     width: 100%;
     margin: 40px 0 32px;
     padding: 10px;
-    font-size: 22px;
     font-size: 18px;
     color: #737380;
     line-height: 32px;
