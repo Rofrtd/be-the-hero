@@ -1,56 +1,75 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./styles.css";
 
 import heroesImg from "../../assets/heroes.png";
 import logoImg from "../../assets/logo.svg";
+import api from "../../services/api";
 
-export default class Home extends React.Component {
-  render() {
-    return (
-      <>
-        <div className="home-container">
-          <header>
-            <img className="logo-home" src={logoImg} alt="Be the Hero" />
-            <div className="user-container">
-              <Link className="button user-btn" to="/login">
-                Login
-              </Link>
-              <Link className="button user-btn" to="/register">
-                Signup
-              </Link>
+export default function Home() {
+  const [cases, setCases] = useState([]);
+
+  useEffect(() => {
+    api.get("cases").then(res => {
+      setCases(res.data);
+    });
+  }, []);
+
+  return (
+    <div className="home-container">
+      <header>
+        <img src={logoImg} alt="Be the Hero" />
+        <div className="buttons">
+          <Link className="button" to="/login">
+            Login
+          </Link>
+          <Link className="button" to="/register">
+            Sign up
+          </Link>
+        </div>
+      </header>
+      <div className="banner-container">
+        <div className="banner-text">
+          <h1 className="text-title">About Us</h1>
+          <p>
+            We are a non profit platform created to help people find local{" "}
+            <strong style={{ color: "#e02041" }}>HEROES</strong>. Our goal is to
+            match people in need with people willing to help.
+          </p>
+          <br></br>
+          <h1 className="text-title">How it works?</h1>
+          <ol>
+            <li>
+              Users are encouraged to sign up and post asking for help or
+              offering help.
+            </li>
+            <li>
+              Your post will be shared and the platform will encourage people to
+              check all those in need and provide details in how to help.
+            </li>
+          </ol>
+        </div>
+        <img src={heroesImg} alt="Heroes" />
+      </div>
+      <ul>
+        {cases.map(c => (
+          <li key={c.id}>
+            <div className="case-header">
+              <strong>{c.title}</strong>
+              <p>
+                {c.name} from {c.city + "-" + c.state}
+              </p>
             </div>
-          </header>
-        </div>
-        <div className="banner-container">
-          <div className="banner-text">
-            <h1 className="text-title">About Us</h1>
-            <p>
-              We're a non profit platform created in order to help those in
-              need. This platform goal is to address all the needs in only one
-              place to be easier to help or get help.
-            </p>
-            <br></br>
-            <h1 className="text-title">How it works?</h1>
-            <ol>
-              <li>
-                Those in need are encouraged to signup and enter their needs at
-                register new case Section, also will be requested some personal
-                information.
-              </li>
-              <li>
-                Once the previous step is completed the platform will share to
-                and encourage the rest of the community to check all those in
-                need and how to help.
-              </li>
-            </ol>
-          </div>
-          <div className="banner-img">
-            <img className="banner-home" src={heroesImg} alt="banner" />
-          </div>
-        </div>
-      </>
-    );
-  }
+            <div className="case-description">
+              <p>{c.description}</p>
+            </div>
+            <Link className="button" to="/">
+              Details
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
