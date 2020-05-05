@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import "./styles.css";
 
-import heroesImg from "../../assets/heroes.png";
+import heroesImg from "../../assets/superhero.svg";
 import logoImg from "../../assets/logo.svg";
 import api from "../../services/api";
 
