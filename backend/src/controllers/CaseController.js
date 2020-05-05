@@ -6,7 +6,7 @@ module.exports = {
     const [count] = await connection("cases").count();
 
     const cases = await connection("cases")
-      .join("ngos", "ngo_id", "=", "cases.ngo_id")
+      .join("ngos", "ngos.id", "=", "cases.ngo_id")
       .limit(5)
       .offset((page - 1) * 5)
       .select([
