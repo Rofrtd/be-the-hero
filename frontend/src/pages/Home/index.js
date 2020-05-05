@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <div className="home-container">
       <header>
-        <img src={logoImg} alt="Be the Hero" />
+        <img className="logo" src={logoImg} alt="My local hero" />
         <div className="buttons">
           <Link className="button" to="/login">
             Login
@@ -34,7 +34,7 @@ export default function Home() {
           <h1 className="text-title">About Us</h1>
           <p>
             We are a non profit platform created to help people find local{" "}
-            <strong style={{ color: "#e02041" }}>HEROES</strong>. Our goal is to
+            <strong style={{ color: "#8377ec" }}>HEROES</strong>. Our goal is to
             match people in need with people willing to help.
           </p>
           <br></br>
@@ -52,7 +52,8 @@ export default function Home() {
         </div>
         <img src={heroesImg} alt="Heroes" />
       </div>
-      <ul>
+      <hr className="divider" />
+      <ul className="item-container">
         {cases.map(c => (
           <li key={c.id}>
             <div className="case-header">

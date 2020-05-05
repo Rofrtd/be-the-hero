@@ -2,7 +2,7 @@
   width: 100%;
   max-width: 1180px;
   padding: 0 30px;
-  margin: 32px auto;
+  margin:32px auto;
 }
 
 .home-container header {
@@ -28,7 +28,6 @@
 .home-container .banner-container {
   width: auto;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   margin: 80px 0 30px;
   display: flex;
@@ -39,7 +38,7 @@
   margin: 40px 0 32px;
   padding: 10px;
   font-size: 18px;
-  color: #737380;
+  color: #3a3b46;
   line-height: 32px;
 }
 
@@ -104,4 +103,13 @@
   width: 100%;
   align-content: center;
   opacity: 0.8;
+}
+
+.divider{
+  width: 60%;
+  margin: auto;
+}
+
+.item-container{
+  margin: 72px auto;
 }
