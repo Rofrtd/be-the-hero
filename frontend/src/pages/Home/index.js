@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import "./styles.css";
 
-import heroesImg from "../../assets/heroes.png";
+import heroesImg from "../../assets/heroes.svg";
 import logoImg from "../../assets/logo.svg";
 import api from "../../services/api";
 
@@ -11,7 +11,7 @@ export default function Home() {
   const [cases, setCases] = useState([]);
 
   useEffect(() => {
-    api.get("cases").then(res => {
+    api.get("cases").then((res) => {
       setCases(res.data);
     });
   }, []);
@@ -34,7 +34,7 @@ export default function Home() {
           <h1 className="text-title">About Us</h1>
           <p>
             We are a non profit platform created to help people find local{" "}
-            <strong style={{ color: "#e02041" }}>HEROES</strong>. Our goal is to
+            <strong style={{ color: "#8377ec" }}>HEROES</strong>. Our goal is to
             match people in need with people willing to help.
           </p>
           <br></br>
@@ -53,7 +53,7 @@ export default function Home() {
         <img src={heroesImg} alt="Heroes" />
       </div>
       <ul>
-        {cases.map(c => (
+        {cases.map((c) => (
           <li key={c.id}>
             <div className="case-header">
               <strong>{c.title}</strong>
