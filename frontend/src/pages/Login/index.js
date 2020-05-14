@@ -5,7 +5,7 @@ import { FiLogIn } from "react-icons/fi";
 import api from "../../services/api";
 import "./styles.css";
 
-import heroesImg from "../../assets/heroes.png";
+import heroesImg from "../../assets/heroes.svg";
 import logoImg from "../../assets/logo.svg";
 
 export default function Login() {
@@ -42,7 +42,7 @@ export default function Login() {
             Submit
           </button>
           <Link className="back-link" to="/register">
-            <FiLogIn size={16} color="#e02041" /> Sign Up
+            <FiLogIn size={16} color="#8377eb" /> Sign Up
           </Link>
         </form>
       </section>

@@ -45,7 +45,7 @@ export default function Register() {
             Sign up and help people find your non-profit organizations cases
           </p>
           <Link className="back-link" to="/">
-            <FiArrowLeft size={16} color="#e02041" /> Log In
+            <FiArrowLeft size={16} color="#8377eb" /> Log In
           </Link>
         </section>
         <form onSubmit={handleRegister}>

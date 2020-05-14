@@ -39,3 +39,8 @@
 .login-container section.form form a:hover {
   opacity: 0.8;
 }
+
+img {
+  height: 50%;
+  width: auto;
+}
