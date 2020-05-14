@@ -53,7 +53,7 @@ export default function Profile() {
           Register new case
         </Link>
         <button type="button">
-          <FiPower onClick={handleLogout} size={18} color="#e02041"></FiPower>
+          <FiPower onClick={handleLogout} size={18} color="#8377eb"></FiPower>
         </button>
       </header>
       <h1>Registered Cases</h1>
