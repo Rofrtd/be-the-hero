@@ -1,4 +1,4 @@
-# My Loca Hero 
+# My Local Hero 
 
 ## Summary
 This project is a non profit project created in order to to help those in need.
